@@ -24,11 +24,11 @@ let predictors =
         "casual";
         "registered"
     |]
-let printSourceLocation() =
-    printfn "Line: %s" __LINE__
-    printfn "Source Directory: %s" __SOURCE_DIRECTORY__
-    printfn "Source File: %s" __SOURCE_FILE__
-printSourceLocation()
+//let printSourceLocation() =
+  //  printfn "Line: %s" __LINE__
+  //  printfn "Source Directory: %s" __SOURCE_DIRECTORY__
+  //  printfn "Source File: %s" __SOURCE_FILE__
+//printSourceLocation()
 // defining the type that will store the bike data
 type BikeData = {Predictors: float[][]; Outputs: float[][]}
 
@@ -121,7 +121,9 @@ let bikeDemand () =
     // if we want to find out the value for weights we can use the Coefficients property of the regression
     let thetas = regression.Coefficients
 
-    System.Console.ReadLine() |> ignore
+    printfn "Value for weights = %A" thetas 
+    
+    //System.Console.ReadLine() |> ignore
     ()
     
 bikeDemand()
